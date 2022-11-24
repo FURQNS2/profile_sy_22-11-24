@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* 화면 모서리에 딱 붙이기 */
+body{
+	margin: 0;
+	padding: 0;
+}
+
+/* 푸터바에 상단여백 */
+tr.footerline01 {
+	height: 80px; 
+
+}
+
+/* 배경색 */
+tr.footerline02 {
+	background-color: #000000;
+}
+
+td.footerbox01 {
+	font-size: 15px;
+	color: #EEEEEE;
+	font-family: Arial;
+	text-align: center;
+	padding: 5px;
+}
+
+td.footerbox02 {
+	font-size: 16px;
+	color: #A09C91;
+	font-family:Arial;
+	text-align: center;
+	padding: 5px;
+	
+}

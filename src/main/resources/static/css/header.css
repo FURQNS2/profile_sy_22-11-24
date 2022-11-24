@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* 화면 모서리에 딱 붙이기 */
+body{
+	margin: 0;
+	padding: 0;
+}
+
+/* 헤더 배경 */
+tr.headline01 {
+	height: 70px;
+	background-color: #000000;  
+}
+
+/* 메뉴 바 하단부분에 여백 */
+tr.headline02 {
+	height: 30px;
+	
+}
+
+/*푸터 테이블 안에 글씨*/
+td.menu01{
+	padding: 10px;  /* 메뉴바 안에 글자들 간의 여백 */
+	font-size: 20px;
+	color: #EEEEEE;
+	font-family: Arial;
+	text-align: center;
+}
+

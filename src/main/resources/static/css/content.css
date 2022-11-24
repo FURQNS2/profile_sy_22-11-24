@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+tr.contentbox {
+	height: 550px;
+	background-color: #EEEEEE;
+}
+
+td.content {
+	text-align: center;
+	font-family: malgun;
+	font-size: 20px;
+	font-weight: bold;
+	color: #464646;
+	
+}
+
+/* login창 설정 시작*/
+
+/*  로그인 글씨 설정 */
+span.content_text01 {
+	text-align: left;
+	font-family: malgun;
+	font-size: 20px;
+	font-weight: bold;
+	color: #F15412;
+}
+
+input.input_type01 {
+	background-color: #ffffff;
+	border: 1px solid #F15412;
+	width: 250px;
+	font-size: 20px;
+	color: #272727;
+	padding: 7px;
+}
+
+input.button_type01 {
+	background-color: #F15412;
+	border: 1px solid #ffffff;
+	width: 180px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #EEEEEE;
+	padding: 5px;
+}
+
+input.button_type01:hover {
+	
+	color: #000000;
+}
+
+/* 질문등록하기  */
+textarea.textarea_type01{
+	background-color: #ffffff;
+	border: 1px solid #F15412;
+	width: 250px;
+	font-size: 20px;
+	color: #272727;
+	padding: 7px;
+}

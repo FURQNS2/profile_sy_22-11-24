@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* 프로필 제목 */
+span.title01{
+	font-size: 70px;
+	color: #000000;
+	font-family: Arial;
+	font-weight: bold; 
+}
+
+/* 프로필 부제목 */
+span.title02{
+	font-size: 20px;
+	color:#F15412;
+	font-family: Arial;
+	font-weight: normal; 
+}
+
+/* 스킬박스 맨 앞 글자 */
+span.title03{
+	font-size: 60px;
+	color: #000000;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+/*스킬박스 뒷 글자*/
+span.title04{
+	font-size: 40px;
+	color: #F15412;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+/* 가능한 프로그래밍 목록 배경 */
+td.skillbox{
+	background-color: #EEEEEE;
+	width: 40%; 
+}
+
+/* 프로필 사진 배경색 */
+td.picbox {
+	background-color: #000000;
+	text-align: center;
+}
+
+/* 테이블 중앙정렬 */
+table {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+/* 글자 정렬 */
+td.titlebox{ 
+	text-align: center;
+}
+
+
+
+
+
