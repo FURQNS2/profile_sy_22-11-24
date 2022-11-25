@@ -33,33 +33,33 @@
 					<tr class="contentbox">
 						<td class="content">
 							<table width="70%" border="0" cellspcing="0" cellpadding="10">
-								<form action="joinok" method="post">
+								
+									<tr>
+										<th colspan="2"><회원 정보 수정 완료></th>										
+									</tr>
 									<tr>
 										<td><span class="content_text01">MEMBER ID</span></td>
-										<td><input class="input_type01" type="text" name="mid"></td>
+										<td><input class="input_type01" type="text" value="${memberDto.mid }" readonly="readonly"></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">MEMBER PW</span></td>
-										<td><input class="input_type01" type="password" name="mpw"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">PW CHECK</span></td>
-										<td><input class="input_type01" type="password" name="mpw_check"></td>
-									</tr>
+										<td><input class="input_type01" type="password" value="${memberDto.mpw }" readonly="readonly"></td>
+									</tr>									
 									<tr>
 										<td><span class="content_text01">NAME</span></td>
-										<td><input class="input_type01" type="password" name="mname"></td>
+										<td><input class="input_type01" type="text" value="${memberDto.mname }" readonly="readonly"></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">E-MAIL</span></td>
-										<td><input class="input_type01" type="password" name="memail"></td>
+										<td><input class="input_type01" type="text" value="${memberDto.memail }" readonly="readonly"></td>
 									</tr>
 										<td colspan="2">
-											<input class="button_type01" type="submit" value="가입완료">&nbsp;&nbsp;
-											<input class="button_type01" type="button" value="로그인" onclick="javascrip:window.location='login'">
+											<br>
+											<input class="button_type01" type="button" value="재수정" onclick="javascrip:window.location='memberModify?mid=${memberDto.mid }'">&nbsp;&nbsp;
+											<input class="button_type01" type="button" value="HOME" onclick="javascrip:window.location='index'">
 										</td>
 									</tr>
-								</form>
+								
 							</table>													
 						</td>
 					</tr>					

@@ -14,4 +14,40 @@
    	SELECT COUNT(*) FROM profile_member WHERE mid=#{param1} 
    </select>
    
-   </mapper>
+   <select id="checkIdAndPw" resultType="int">
+   	SELECT COUNT(*) FROM profile_member WHERE mid=#{param1} AND mpw=#{param2} 
+   </select>
+   
+   <select id="getMemberInfo" resultType="com.sycompany.hp.dto.MemberDto">
+   	SELECT * FROM profile_member WHERE mid=#{param1}
+   </select>
+   
+   <!-- 멤버수정 -->
+   <update id="memberModify">
+   		UPDATE profile_member SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
+   </update>
+   
+   <!-- 게시판 작성 -->
+   <insert id="writeQuestion">
+		INSERT INTO profile_board(qnum, qid, qname, qcontent, qemail) VALUES(profile_seq.nextval,#{param1},#{param2},#{param3},#{param4})
+   </insert>
+   
+   <select id="questionList" resultType="com.sycompany.hp.dto.QBoardDto">
+   		SELECT * FROM profile_board ORDER BY qnum DESC
+   </select>
+   
+   <!-- 글내용 보기 -->
+   <select id="questionView" resultType="com.sycompany.hp.dto.QBoardDto">
+   		SELECT * FROM profile_board WHERE qnum=#{param1}
+   </select>
+   
+   <update id="questionModify">
+   		UPDATE profile_board SET qname=#{param2}, qcontent=#{param3}, qemail=#{param4} WHERE qnum=#{param1}   
+   </update>
+   
+   <!-- 글삭제 -->
+   <delete id="questionDelete">
+   		DELETE FROM profile_board WHERE qnum=#{param1}
+   </delete>
+   
+</mapper>

@@ -33,8 +33,24 @@
 				<table width="70%" border="0" cellspacing="0" cellpadding="10">
 					<tr class="contentbox">
 						<td class="content">
+						
+						<%
+							int joinFlag = Integer.parseInt(request.getAttribute("joinFlag").toString());
+						
+							if(joinFlag == 0){
+								
+						%>
+								<script type="text/javascript">
+									alert("이미 있는 아이디 입니다. 다시 확인해주세요.");
+									history.go(-1);
+								</script>
+												
+						<%	}else{	%>		
 							<u>${mname }</u>님 회원가입을 축하드립니다! <br>
-							가입하신 아이디는 <u>${mid }</u>입니다.														
+							가입하신 아이디는 <u>${mid }</u>입니다.
+						<% } %>
+						
+																					
 						</td>
 					</tr>					
 				</table>				

@@ -7,8 +7,7 @@
 <title>** SY Profile</title>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/title.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/content.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/hyper.css">
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/join.js"></script>
 </head>
 <body>
 <!-- 헤더 시작 -->
@@ -35,29 +34,30 @@
 					<tr class="contentbox">
 						<td class="content">
 							<table width="70%" border="0" cellspcing="0" cellpadding="10">
-								<form action="questionok" method="post" name="board_frm">
+								<form action="memberModifyok" method="post">
 									<tr>
-										<td><span class="content_text01">ID</span></td>
-										<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>
+										<td><span class="content_text01">MEMBER ID</span></td>
+										<td><input class="input_type01" type="text" name="mid" value="${memberId }" readonly="readonly"></td>
+									</tr>
+									<tr>
+										<td><span class="content_text01">MEMBER PW</span></td>
+										<td><input class="input_type01" type="password" name="mpw"></td>
+									</tr>
+									<tr>
+										<td><span class="content_text01">PW CHECK</span></td>
+										<td><input class="input_type01" type="password" name="mpw_check"></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">NAME</span></td>
-										<td><input class="input_type01" type="text" name="qname"></td>
+										<td><input class="input_type01" type="text" name="mname" value="${memberDto.mname }"></td>
 									</tr>
-									<tr>
-										<td><span class="content_text01">QUESTION</span></td>
-										<td>
-											<textarea class="textarea_type01" rows="5" cols="50" name="qcontent"></textarea>
-										</td>
-										
-									</tr>									
 									<tr>
 										<td><span class="content_text01">E-MAIL</span></td>
-										<td><input class="input_type01" type="text" name="qemail"></td>
+										<td><input class="input_type01" type="text" name="memail" value="${memberDto.memail }"></td>
 									</tr>
 										<td colspan="2">
-											<input class="button_type01" type="button" value="질문하기" onclick="boardCheck()">&nbsp;&nbsp;
-											<input class="button_type01" type="button" value="글목록" onclick="javascrip:window.location='questionlist'">
+											<input class="button_type01" type="submit" value="수정완료" onclick="joinCheck()">&nbsp;&nbsp;
+											<input class="button_type01" type="button" value="수정취소" onclick="javascrip:window.location='index'">
 										</td>
 									</tr>
 								</form>

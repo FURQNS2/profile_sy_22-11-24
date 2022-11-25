@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/title.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/content.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/hyper.css">
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
 </head>
 <body>
 <!-- 헤더 시작 -->
@@ -35,29 +34,32 @@
 					<tr class="contentbox">
 						<td class="content">
 							<table width="70%" border="0" cellspcing="0" cellpadding="10">
-								<form action="questionok" method="post" name="board_frm">
+								<form action="questionmodifyok" method="post">
+									<input type="hidden" value="${qdto.qnum }" name="qnum">
+									<tr>
+										<th colspan="2"><글보기></th>										
+									</tr>
 									<tr>
 										<td><span class="content_text01">ID</span></td>
-										<td><input class="input_type01" type="text" name="qid" value="${memberId }" readonly="readonly"></td>
+										<td><input class="input_type01" type="text" name="qid" value="${qdto.qid }" ></td>
 									</tr>
 									<tr>
 										<td><span class="content_text01">NAME</span></td>
-										<td><input class="input_type01" type="text" name="qname"></td>
-									</tr>
-									<tr>
-										<td><span class="content_text01">QUESTION</span></td>
-										<td>
-											<textarea class="textarea_type01" rows="5" cols="50" name="qcontent"></textarea>
-										</td>
-										
+										<td><input class="input_type01" type="text" name="qname" value="${qdto.qname }"></td>
 									</tr>									
 									<tr>
+										<td><span class="content_text01">QUESTION</span></td>
+										<td><textarea class="textarea_type01" rows="5" cols="50" name="qcontent">${qdto.qcontent }</textarea></td>
+									</tr>
+									<tr>
 										<td><span class="content_text01">E-MAIL</span></td>
-										<td><input class="input_type01" type="text" name="qemail"></td>
+										<td><input class="input_type01" type="text" name="qemail" value="${qdto.qemail }" ></td>
 									</tr>
 										<td colspan="2">
-											<input class="button_type01" type="button" value="질문하기" onclick="boardCheck()">&nbsp;&nbsp;
-											<input class="button_type01" type="button" value="글목록" onclick="javascrip:window.location='questionlist'">
+											<br>
+											<input class="button_type01" type="submit" value="재수정완료">
+											<input class="button_type01" type="button" value="삭제" onclick="javascrip:window.location='questionDelet?qnum=${qdto.qnum}'">&nbsp;&nbsp;																					
+											<input class="button_type01" type="button" value="목록" onclick="javascrip:window.location='questionlist'">
 										</td>
 									</tr>
 								</form>

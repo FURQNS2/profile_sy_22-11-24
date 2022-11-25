@@ -35,7 +35,7 @@
 	}
 	
 	if(document.join_frm.memail.value.length == 0) {
-		alert("이름은 필수입력사합입니다!");		
+		alert("이메일은 필수입력사합입니다!");		
 		return;
 	}
 

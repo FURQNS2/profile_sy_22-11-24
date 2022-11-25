@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/hyper.css">
 </head>
 <body>
+
 <!-- 헤더 시작 -->
 	<%@ include file="include/header.jsp" %>
 <!-- 헤더 끝-->
@@ -33,8 +34,8 @@
 				<table width="70%" border="0" cellspacing="0" cellpadding="10">
 					<tr class="contentbox">
 						<td class="content">
-							<u>${mname }</u>님 환영합니다. <br>
-							로그인한 아이디는 <u>${mid }</u>입니다.														
+							<u>${mid }</u>님 환영합니다. <br>
+							<u>${memberDto.mname }</u>님의 가입일은 <u>[${memberDto.mdate} ]</u>입니다.																				
 						</td>
 					</tr>					
 				</table>				

@@ -45,9 +45,12 @@ input.button_type01 {
 	padding: 5px;
 }
 
-input.button_type01:hover {
-	
+/* 마우스가 올라오면 버튼색 변경  */
+input.button_type01:hover {	
+	background-color: #34B3F1;
 	color: #000000;
+	font-size: 21px;
+	cursor: pointer;  /* 커서 마우스 포인터모양 변경  */
 }
 
 /* 질문등록하기  */
